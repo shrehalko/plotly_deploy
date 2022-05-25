@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p> <b> Use the interactive charts below to explore the dataset </b> </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+          <h3>BellyButton Biodiversity: <small> Do you have it in you?</small></h3>
+      </div>
+      <div class="col-md-9">
+          <p>
+            Scientists are researching to identify bacterial species that have an ability to synthesize protiens that taste like beef. 
+            There is a hypothesis that there is a micro organism that can supply the next best taste. Human body is a source of a thousands 
+            of types of bacteria and different parts of the body harbor different species. The hypothesis is that the ideal bacterial species 
+            to make synthetic beef can be found in the belly button. To test this hypothesis, we are analyzing the samples of people from across 
+            the country to identify the bacterial species that colonize our bellybutton.
+            
+            The user can find one's information by selecting the id number from the drop down menu, to see which bacterial species live in their 
+            navels. They can explore the information displayed in varipus charts on the dashboard and also compare the information with other 
+            individuals as well.
+          </p>
+      </div>
+  </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+        <!-- <div class = "well">
+          <p>
+            The demographic panel above displays the details of a volunteer, such as age, location, ethnicity, ID number, and weekly washing 
+            frequency of the belly button.
+          </p>
+        </div>   -->
+      </div>
+
+      <div class="col-md-5">
+        <div id="bar"></div>
+        <!-- <div class = "well">
+          <p>
+            The bar graph displays the top 10 Bacteria Species found in the navel of the person. <br>
+            <b>OTU stands for Operational Taxonomic Unit, and here it means species or bacterial type.</b>
+          </p>
+        </div> -->
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+        <!-- <div class = "well">
+          <p>
+            The gauge above displays the washing the frequency of the belly button for the individual selected.
+          </p>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <div class = "well">
+          <p>
+            The demographic panel above displays the details of a volunteer, such as age, location, ethnicity, ID number, and weekly washing 
+            frequency of the belly button.
+          </p>
+        </div>  
+      </div>
+      <div class="col-md-5">
+        <div class = "well">
+          <p>
+            The bar graph displays the top 10 Bacteria Species found in the navel of the person. <br>
+            <b>OTU stands for Operational Taxonomic Unit, and here it means species or bacterial type.</b>
+          </p>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class = "well">
+          <p>
+            The gauge above displays the washing the frequency of the belly button for the individual selected.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+        <div class = "well">
+          <p>
+            Here is the link to the article explaining about the study:
+            <a href = "https://www.nationalgeographic.com/science/article/121114-belly-button-bacteria-science-health-dunn"></a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="static/js/charts.js"></script>
+
+</body>
+
+</html>
