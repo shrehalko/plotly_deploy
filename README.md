@@ -52,6 +52,4 @@ BellyButton Biodiversity interctive Dashboard: https://shrehalko.github.io/plotl
 
 ## <a name="references"></a> References
 
-https://andrejach.github.io/plotly_deploy/
-
 https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
